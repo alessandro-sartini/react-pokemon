@@ -10,8 +10,8 @@
   border: 2px solid #1976d2;
 }
 .single-poke-container img {
-  width: 120px;
-  height: 120px;
+  width: 250px;
+  height: 250px;
   object-fit: contain;
   margin-bottom: 1rem;
 }
@@ -28,10 +28,99 @@
   padding: 0;
 }
 .single-poke-container li {
-  background: #d32f2f;
-  color: #fff;
   border-radius: 8px;
   padding: 0.3rem 1rem;
   font-size: 0.95rem;
   font-family: "Press Start 2P", monospace;
+}
+
+.type-fire {
+  background-color: #ff5500; /* Arancione */
+  color: white;
+}
+
+.type-water {
+  background-color: #007bff; /* Blu */
+  color: white;
+}
+
+.type-grass {
+  background-color: #28a745; /* Verde */
+  color: white;
+}
+
+.type-electric {
+  background-color: #ffc107; /* Giallo */
+  color: black;
+}
+
+.type-normal {
+  background-color: #a0a0a0; /* Grigio chiaro */
+  color: black;
+}
+
+.type-poison {
+  background-color: #8f00ff; /* Viola */
+  color: white;
+}
+
+/* Aggiungi classi per tutti i tipi che vuoi colorare */
+.type-bug {
+  background-color: #8c8f00;
+  color: white;
+}
+
+.type-flying {
+  background-color: #92b7ff; /* Azzurro */
+  color: black;
+}
+
+.type-ground {
+  background-color: #b87333; /* Marrone */
+  color: white;
+}
+
+.type-rock {
+  background-color: #8b4513; /* Marrone scuro */
+  color: white;
+}
+
+.type-ghost {
+  background-color: #6a0dad; /* Viola scuro */
+  color: white;
+}
+
+.type-dragon {
+  background-color: #4a148c; /* Viola profondo */
+  color: white;
+}
+
+.type-ice {
+  background-color: #4682b4; /* Blu acciaio */
+  color: white;
+}
+
+.type-fighting {
+  background-color: #dc3545; /* Rosso */
+  color: white;
+}
+
+.type-psychic {
+  background-color: #ff69b4; /* Rosa */
+  color: white;
+}
+
+.type-steel {
+  background-color: #b0c4de; /* Grigio-blu */
+  color: black;
+}
+
+.type-dark {
+  background-color: #36454f; /* Grigio scuro */
+  color: white;
+}
+
+.type-fairy {
+  background-color: #ffb6c1; /* Rosa chiaro */
+  color: black;
 }

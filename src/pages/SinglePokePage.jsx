@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useGlobalContext } from "../context/GlobalContext";
 import "../cssComponents/SinglePokePage.css";
+import TypeList from "../components/signleProduct/TypeList";
 
 export default function SinglePokePage() {
   const { slug } = useParams();
@@ -12,6 +13,7 @@ export default function SinglePokePage() {
   useEffect(() => {
     fetchSinglePokemon(slug);
   }, [slug]);
+
 
   return (
     <div>
@@ -24,16 +26,10 @@ export default function SinglePokePage() {
           <h2>{currentPokemon?.name}</h2>
           <img src={currentPokemon?.imageUrl} alt={currentPokemon?.name} />
           <p>{currentPokemon?.description}</p>
-          <h3>Tipi:</h3>
-          {currentPokemon?.types?.length > 0 ? (
-            <ul>
-              {currentPokemon?.types.map((type) => (
-                <li key={type.id}>{type.name}</li>
-              ))}
-            </ul>
-          ) : (
-            <p>Nessun tipo disponibile.</p>
-          )}
+            <h3>Tipi:</h3>
+            
+          <TypeList types={currentPokemon?.types } />
+          
         </div>
       )}
     </div>
