@@ -1,4 +1,45 @@
 /* NavBar stile Pokédex */
+
+.window {
+  background-color: #ba1a25;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: none;
+  border-right: 4px solid #222;
+  box-shadow: none;
+  padding: 1.2rem 2.5rem 1.2rem 2.5rem;
+  position: absolute;
+  left: 350px;
+  top: 10px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  min-width: 180px;
+  height: 70px;
+  margin-left: 0;
+}
+.window::before {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 22px;
+  background: radial-gradient(circle at 60% 60%, #fff 60%, #1976d2 100%);
+  border: 3px solid #222;
+  border-radius: 50%;
+  margin-right: 1.2rem;
+  box-shadow: 0 0 8px #1976d2aa;
+}
+.window h1 {
+  color: #fff;
+  font-family: "Press Start 2P", monospace;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  margin: 0;
+  text-shadow: 1px 1px 0 #b71c1c;
+}
+
 .pokedex-navbar {
   background: linear-gradient(90deg, #d32f2f 80%, #b71c1c 100%);
   border-right: 8px solid #222;
@@ -13,7 +54,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 1;
 }
 .pokedex-navbar h5 {
   font-family: "Press Start 2P", monospace;

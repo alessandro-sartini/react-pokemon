@@ -7,7 +7,10 @@ export default function Home() {
 
   return (
     <div>
-      <h1>Pokédex</h1>
+      <div className="window">
+        <h1>Pokédex</h1>
+      </div>
+      <div style={{ height: "80px" }}></div>
       {isLoading == true ? (
         <div className="wrapper">
           <div className="pokeball"></div>
