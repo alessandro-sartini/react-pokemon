@@ -1,17 +1,18 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import FilterCheckBox from "./FilterCheckBox";
+import "../../cssComponents/navBar.css";
 
 export default function NavBar() {
+  const location = useLocation();
   return (
-    <aside
-      className="bg-danger text-white p-3 vh-100 position-fixed top-0 left-0"
-      style={{ width: "250px", zIndex: 100 }}
-    >
+    <aside className="pokedex-navbar">
       <h5 className="mb-4">Menu Principale</h5>
       <ul className="nav flex-column">
         <li className="nav-item">
           <Link
-            className="nav-link active text-white"
+            className={`nav-link text-white${
+              location.pathname === "/" ? " active" : ""
+            }`}
             aria-current="page"
             to="/"
           >
@@ -19,7 +20,12 @@ export default function NavBar() {
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link text-white" to="/about">
+          <Link
+            className={`nav-link text-white${
+              location.pathname === "/pokedex" ? " active" : ""
+            }`}
+            to="/pokedex"
+          >
             Pokedex
           </Link>
         </li>

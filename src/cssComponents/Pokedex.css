@@ -1,0 +1,34 @@
+/* Card e lista Pokédex */
+.pokedex-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+  list-style: none;
+}
+.pokedex-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  border: 2px solid #d32f2f;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.pokedex-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(211, 47, 47, 0.15);
+}
+.pokedex-card img {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+.pokedex-card h2 {
+  font-size: 1.2rem;
+  color: #d32f2f;
+  margin-bottom: 0.5rem;
+  font-family: "Press Start 2P", monospace;
+}

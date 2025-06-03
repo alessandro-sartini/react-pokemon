@@ -1,0 +1,58 @@
+/* NavBar stile Pokédex */
+.pokedex-navbar {
+  background: linear-gradient(90deg, #d32f2f 80%, #b71c1c 100%);
+  border-right: 8px solid #222;
+  box-shadow: 6px 0 24px rgba(0, 0, 0, 0.18);
+  min-width: 250px;
+  max-width: 350px;
+  height: 100vh;
+  padding: 2.5rem 1.2rem 1.2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.pokedex-navbar h5 {
+  font-family: "Press Start 2P", monospace;
+  letter-spacing: 2px;
+  margin-bottom: 2.5rem;
+  color: #fff;
+  text-shadow: 1px 1px 0 #b71c1c;
+}
+.pokedex-navbar .nav-link {
+  font-weight: bold;
+  color: #fff !important;
+  margin-bottom: 0.7rem;
+  border-radius: 10px;
+  padding: 0.7rem 1.2rem;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  font-size: 1.05rem;
+  box-shadow: none;
+}
+.pokedex-navbar .nav-link.active,
+.pokedex-navbar .nav-link.selected {
+  background: #fff;
+  color: #d32f2f !important;
+  box-shadow: 0 2px 8px #b71c1c33;
+  border: 2px solid #d32f2f;
+}
+.pokedex-navbar .nav-link:hover {
+  background: #fff3;
+  color: #fff !important;
+}
+.pokedex-navbar .form-check-label {
+  color: #fff;
+}
+.pokedex-navbar .form-check-input:checked {
+  background-color: #1976d2;
+  border-color: #1976d2;
+}
+.pokedex-navbar .form-check-input {
+  margin-right: 0.5rem;
+}
+.pokedex-navbar .list-unstyled {
+  margin-bottom: 1.5rem;
+}
