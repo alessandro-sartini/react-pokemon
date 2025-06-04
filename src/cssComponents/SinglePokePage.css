@@ -46,92 +46,92 @@
 }
 
 .type-fire {
-  background-color: #ff5500; /* Arancione */
+  background-color: #ff5500;
   color: white;
 }
 
 .type-water {
-  background-color: #007bff; /* Blu */
+  background-color: #007bff;
   color: white;
 }
 
 .type-grass {
-  background-color: #28a745; /* Verde */
+  background-color: #28a745;
   color: white;
 }
 
 .type-electric {
-  background-color: #ffc107; /* Giallo */
+  background-color: #ffc107;
   color: black;
 }
 
 .type-normal {
-  background-color: #a0a0a0; /* Grigio chiaro */
+  background-color: #a0a0a0; 
   color: black;
 }
 
 .type-poison {
-  background-color: #8f00ff; /* Viola */
+  background-color: #8f00ff;
   color: white;
 }
 
-/* Aggiungi classi per tutti i tipi che vuoi colorare */
+
 .type-bug {
   background-color: #8c8f00;
   color: white;
 }
 
 .type-flying {
-  background-color: #92b7ff; /* Azzurro */
+  background-color: #92b7ff;
   color: black;
 }
 
 .type-ground {
-  background-color: #b87333; /* Marrone */
+  background-color: #b87333; 
   color: white;
 }
 
 .type-rock {
-  background-color: #8b4513; /* Marrone scuro */
+  background-color: #8b4513;
   color: white;
 }
 
 .type-ghost {
-  background-color: #6a0dad; /* Viola scuro */
+  background-color: #6a0dad;
   color: white;
 }
 
 .type-dragon {
-  background-color: #4a148c; /* Viola profondo */
+  background-color: #4a148c;
   color: white;
 }
 
 .type-ice {
-  background-color: #4682b4; /* Blu acciaio */
+  background-color: #4682b4; 
   color: white;
 }
 
 .type-fighting {
-  background-color: #dc3545; /* Rosso */
+  background-color: #dc3545; 
   color: white;
 }
 
 .type-psychic {
-  background-color: #ff69b4; /* Rosa */
+  background-color: #ff69b4; 
   color: white;
 }
 
 .type-steel {
-  background-color: #b0c4de; /* Grigio-blu */
+  background-color: #b0c4de;
   color: black;
 }
 
 .type-dark {
-  background-color: #36454f; /* Grigio scuro */
+  background-color: #36454f;
   color: white;
 }
 
 .type-fairy {
-  background-color: #ffb6c1; /* Rosa chiaro */
+  background-color: #ffb6c1;
   color: black;
 }
