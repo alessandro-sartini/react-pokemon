@@ -14,7 +14,6 @@ export default function SinglePokePage() {
     fetchSinglePokemon(slug);
   }, [slug]);
 
-
   return (
     <div>
       {isLoadingSinglePokemon == true ? (
@@ -24,12 +23,11 @@ export default function SinglePokePage() {
       ) : (
         <div className="single-poke-container">
           <h2>{currentPokemon?.name}</h2>
+          <h3>N. {currentPokemon?.numberPokedex}</h3> 
           <img src={currentPokemon?.imageUrl} alt={currentPokemon?.name} />
           <p>{currentPokemon?.description}</p>
-            <h3>Tipi:</h3>
-            
-          <TypeList types={currentPokemon?.types } />
-          
+          <h4>Tipi:</h4>
+          <TypeList types={currentPokemon?.types} />
         </div>
       )}
     </div>

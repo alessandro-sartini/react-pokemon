@@ -55,7 +55,7 @@ export default function FilterCheckBox() {
         ))}
       </ul>
       {/* Per test: mostra il tipo attualmente selezionato */}
-      <p>Tipo selezionato: {selectedTypes}</p>
+      {/* <p>Tipo selezionato: {selectedTypes}</p> */}
     </div>
   );
 }

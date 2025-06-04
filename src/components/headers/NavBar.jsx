@@ -31,7 +31,7 @@ export default function NavBar() {
         </li>
       </ul>
       {/* aggiungere qui  */}
-      {location.pathname === "/pokedex" || location.pathname === "/" ? (
+      {location.pathname === "/pokedex"  ? (
         <FilterCheckBox />
       ) : null}
     </aside>
