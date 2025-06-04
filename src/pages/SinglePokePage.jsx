@@ -13,6 +13,9 @@ export default function SinglePokePage() {
   useEffect(() => {
     fetchSinglePokemon(slug);
   }, [slug]);
+  function pokedexNumber(pokedex) {
+    return String(pokedex).padStart(3, "0");
+  }
 
   return (
     <div>
@@ -23,7 +26,7 @@ export default function SinglePokePage() {
       ) : (
         <div className="single-poke-container">
           <h2>{currentPokemon?.name}</h2>
-          <h3>N. {currentPokemon?.numberPokedex}</h3> 
+          <h3>N. {pokedexNumber(currentPokemon?.numberPokedex)}</h3>
           <img src={currentPokemon?.imageUrl} alt={currentPokemon?.name} />
           <p>{currentPokemon?.description}</p>
           <h4>Tipi:</h4>

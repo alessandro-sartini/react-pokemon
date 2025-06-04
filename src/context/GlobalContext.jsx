@@ -5,7 +5,7 @@ const GlobalContext = createContext();
 
 const GlobalProvider = ({ children }) => {
   const apiUrl = import.meta.env.VITE_API_POKEMON;
-  //!all pokemonsimport { the } from './../../node_modules/react-router/dist/development/register-BkDIKxVz.d';
+  //!all pokemonsimport
 
   const [pokemons, setPokemons] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -16,13 +16,11 @@ const GlobalProvider = ({ children }) => {
 
   // !types
   const [types, setTypes] = useState([]);
-  const [selectedTypes, setSelectedTypes] = useState([]); 
-  const [isLoadingTypes, setIsLoadingTypes] = useState(false);
-
+  const [selectedTypes, setSelectedTypes] = useState([]);
 
   useEffect(() => {
     axios
-      .get(apiUrl+"?type="+selectedTypes)
+      .get(apiUrl + "?type=" + selectedTypes)
       .then((response) => {
         setPokemons(response.data);
       })
@@ -49,9 +47,7 @@ const GlobalProvider = ({ children }) => {
       });
   };
 
-
-    useEffect(() => {
-    setIsLoadingTypes(true);
+  useEffect(() => {
     axios
       .get(`http://localhost:8080/api/types`)
       .then((response) => {
@@ -60,9 +56,6 @@ const GlobalProvider = ({ children }) => {
       .catch((error) => {
         console.error("Errore durante il recupero dei tipi:", error);
         setTypes([]);
-      })
-      .finally(() => {
-        setIsLoadingTypes(false);
       });
   }, []);
 
@@ -75,7 +68,6 @@ const GlobalProvider = ({ children }) => {
     fetchSinglePokemon,
     currentPokemon,
 
-    // fetchTypes,
     types,
     selectedTypes,
     setSelectedTypes,
