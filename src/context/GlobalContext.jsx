@@ -11,7 +11,7 @@ const GlobalProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   // ! signle pokemon
-  const [currentPokemon, setCurrentPokemon] = useState(null);
+  const [currentPokemon, setCurrentPokemon] = useState({});
   const [isLoadingSinglePokemon, setIsLoadingSinglePokemon] = useState(false);
 
   // !types
