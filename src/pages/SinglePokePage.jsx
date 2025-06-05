@@ -45,7 +45,7 @@ export default function SinglePokePage() {
       )}
       <div className="d-flex justify-content-around m-5 ">
         <button
-          className={`poke-btn poke-btn-prev btn mx-2${
+          className={`poke-btn poke-btn-prev btn${
             isFirstPokemon ? " disabled" : ""
           }`}
           onClick={goToPrevPokemon}

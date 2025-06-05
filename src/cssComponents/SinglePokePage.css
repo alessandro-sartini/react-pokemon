@@ -25,6 +25,41 @@
   font-family: "Press Start 2P", monospace;
   margin-bottom: 1rem;
 }
+.poke-btn {
+ 
+  font-family: "Press Start 2P", monospace;
+  font-size: 1rem;
+  border: 2px solid #d32f2f;
+  border-radius: 8px;
+  background: #ffcb05;
+  color: #222;
+  padding: 0.5rem 1.5rem;
+  margin: 0 0.5rem;
+  transition: background 0.15s, color 0.15s, border 0.15s;
+  box-shadow: none;
+}
+
+
+.poke-btn:hover {
+  background: #ffe066;
+  color: #d32f2f;
+  border-color: #1976d2;
+}
+.poke-btn.poke-btn-prev {
+  border-color: #d32f2f;
+}
+.poke-btn.poke-btn-next {
+  border-color: #1976d2;
+}
+.poke-btn.poke-btn-prev:hover {
+  background: #ffd6d6;
+  color: #d32f2f;
+}
+.poke-btn.poke-btn-next:hover {
+  background: #d6e6ff;
+  color: #1976d2;
+}
+
 .single-poke-container h4 {
   color: #d32f2f;
   font-family: "Press Start 2P", monospace;
@@ -135,41 +170,3 @@
   color: black;
 }
 
-.poke-btn {
-  font-family: "Press Start 2P", monospace;
-  font-size: 1rem;
-  border: 2px solid #d32f2f;
-  border-radius: 8px;
-  background: #ffcb05;
-  color: #222;
-  padding: 0.5rem 1.5rem;
-  margin: 0 0.5rem;
-  transition: background 0.15s, color 0.15s, border 0.15s;
-  box-shadow: none;
-}
-.poke-btn:disabled,
-.poke-btn.disabled {
-  background: #e0e0e0;
-  color: #aaa;
-  border-color: #bdbdbd;
-  cursor: not-allowed;
-}
-.poke-btn:hover:not(:disabled):not(.disabled) {
-  background: #ffe066;
-  color: #d32f2f;
-  border-color: #1976d2;
-}
-.poke-btn.poke-btn-prev {
-  border-color: #d32f2f;
-}
-.poke-btn.poke-btn-next {
-  border-color: #1976d2;
-}
-.poke-btn.poke-btn-prev:hover:not(:disabled):not(.disabled) {
-  background: #ffd6d6;
-  color: #d32f2f;
-}
-.poke-btn.poke-btn-next:hover:not(:disabled):not(.disabled) {
-  background: #d6e6ff;
-  color: #1976d2;
-}
