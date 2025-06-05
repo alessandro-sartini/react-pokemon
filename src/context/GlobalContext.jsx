@@ -59,6 +59,36 @@ const GlobalProvider = ({ children }) => {
       });
   }, []);
 
+  //todo trovo l'indice del pokemon
+  //! lo porto in single page per capire a che indice mi trovo
+  const getCurrentPokemonIndex = () => {
+    if (!currentPokemon || pokemons.length === 0) return -1;
+    return pokemons.findIndex((p) => p.slug === currentPokemon.slug);
+  };
+
+  //todo uso l'indice del pokemon per trovare lo slug ed avanzare di uno
+
+  const goToNextPokemon = () => {
+    const currentIndex = getCurrentPokemonIndex();
+    if (currentIndex !== -1 && currentIndex < pokemons.length - 1) {
+      const nextPokemonSlug = pokemons[currentIndex + 1].slug;
+      fetchSinglePokemon(nextPokemonSlug);
+    }
+  };
+
+  //todo uso l'indice del pokemon per trovare lo slug ed scalare di uno
+
+  const goToPrevPokemon = () => {
+    const currentIndex = getCurrentPokemonIndex();
+    if (currentIndex > 0) {
+      const prevPokemonSlug = pokemons[currentIndex - 1].slug;
+      fetchSinglePokemon(prevPokemonSlug);
+    }
+  };
+
+
+
+
   const value = {
     isLoadingSinglePokemon,
 
@@ -67,6 +97,9 @@ const GlobalProvider = ({ children }) => {
 
     fetchSinglePokemon,
     currentPokemon,
+    goToNextPokemon,
+    goToPrevPokemon,
+    getCurrentPokemonIndex,
 
     types,
     selectedTypes,

@@ -30,9 +30,9 @@ export default function FilterCheckBox() {
   };
 
   // Messaggio di caricamento se i tipi non sono ancora disponibili.
-  // if (types.length === 0) {
-  //   return <p>Caricamento tipi o nessun tipo disponibile...</p>;
-  // }
+  if (types.length === 0) {
+    return <p>Caricamento tipi o nessun tipo disponibile...</p>;
+  }
 
   return (
     <div>
