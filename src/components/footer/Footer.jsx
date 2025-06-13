@@ -1,5 +1,5 @@
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import '../../cssComponents/footer.css'
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import "../../cssComponents/footer.css";
 
 export default function Footer() {
   return (
@@ -28,7 +28,7 @@ export default function Footer() {
           </li>
         </ul>
         <div className="footer-text">
-          <p>"Allena la tua curiosità, catturali tutti!"</p>
+          <p>"Train your curiosity, catch them all!"</p>
           <p className="footer-sign">Pokédex &copy; 2025</p>
         </div>
       </div>

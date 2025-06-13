@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { useGlobalContext } from "../context/GlobalContext";
 import "../cssComponents/SinglePokePage.css";
 import TypeList from "../components/signleProduct/TypeList";
@@ -28,10 +28,24 @@ export default function SinglePokePage() {
 
   const isFirstPokemon = getCurrentPokemonIndex() === 0;
   const isLastPokemon = getCurrentPokemonIndex() === pokemons.length - 1;
+  if (!currentPokemon.slug) {
+    return (
+      <div className="d-flex flex-column align-items-center justify-content-center vh-100 text-center">
+        <h1>No Pokémon found, sorry!</h1>
+        <Link
+          className="btn btn-danger mt-4"
+          style={{ backgroundColor: "#d32f2f" }}
+          to={"/"}
+        >
+          Back to Home
+        </Link>
+      </div>
+    );
+  }
 
   return (
     <div>
-      {isLoadingSinglePokemon == true ? (
+      {isLoadingSinglePokemon === true ? (
         <Loader />
       ) : (
         <div className="single-poke-container">
@@ -39,7 +53,7 @@ export default function SinglePokePage() {
           <h3>N. {pokedexNumber(currentPokemon?.numberPokedex)}</h3>
           <img src={currentPokemon?.imageUrl} alt={currentPokemon?.name} />
           <p>{currentPokemon?.description}</p>
-          <h4>Tipi:</h4>
+          <h4>Types:</h4>
           <TypeList types={currentPokemon?.types} />
         </div>
       )}
@@ -51,7 +65,7 @@ export default function SinglePokePage() {
           onClick={goToPrevPokemon}
           disabled={isFirstPokemon}
         >
-          Precedente
+          Previous
         </button>
         <button
           className={`poke-btn poke-btn-next btn${
@@ -60,7 +74,7 @@ export default function SinglePokePage() {
           onClick={goToNextPokemon}
           disabled={isLastPokemon}
         >
-          Prossimo
+          Next
         </button>
       </div>
     </div>

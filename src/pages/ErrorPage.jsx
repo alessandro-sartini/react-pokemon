@@ -5,15 +5,19 @@ export default function ErrorPage() {
     <div className="no-pokemon-message">
       <p>
         Oh no!
-        <br /> Uno snorlax ti sta bloccando la strada!
+        <br /> A Snorlax is blocking your way!
       </p>
       <img
         src="/imgs/snorlax.jpg"
-        alt="Snorlax che dorme"
+        alt="Sleeping Snorlax"
         style={{ width: "450px" }}
       />
-      <Link className="btn btn-danger mt-4" to={"/"}>
-        Torna al percoso 1!
+      <Link
+        className="btn btn-danger mt-4"
+        style={{ backgroundColor: "#d32f2f" }}
+        to={"/"}
+      >
+        Go back to Route 1!
       </Link>
     </div>
   );

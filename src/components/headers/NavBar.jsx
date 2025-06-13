@@ -6,7 +6,7 @@ export default function NavBar() {
   const location = useLocation();
   return (
     <aside className="pokedex-navbar">
-      <h5 className="mb-4">Menu Principale</h5>
+      <h5 className="mb-4">Main Menu</h5>
       <ul className="nav flex-column">
         <li className="nav-item">
           <Link
@@ -26,14 +26,12 @@ export default function NavBar() {
             }`}
             to="/pokedex"
           >
-            Pokedex
+            Pokédex
           </Link>
         </li>
       </ul>
-      {/* aggiungere qui  */}
-      {location.pathname === "/pokedex"  ? (
-        <FilterCheckBox />
-      ) : null}
+     
+      {location.pathname === "/pokedex" ? <FilterCheckBox /> : null}
     </aside>
   );
 }

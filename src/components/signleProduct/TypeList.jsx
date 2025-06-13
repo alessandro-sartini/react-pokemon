@@ -43,11 +43,10 @@ function getTypeClassName(typeName) {
 }
 
 export default function TypeList({ types }) {
-  if (!types?.length) return <p>Nessun tipo disponibile.</p>;
+  if (!types?.length) return <p>No types available.</p>;
   return (
     <ul>
-          {types?.map((type) => (
-          
+      {types?.map((type) => (
         <li key={type.id} className={getTypeClassName(type.name)}>
           {type.name}
         </li>

@@ -16,7 +16,7 @@ export default function Home() {
         <Loader />
       ) : pokemons.length === 0 ? (
         <div className="no-pokemon-message">
-          <p>Nessun Pokémon trovato. Riprova più tardi!</p>
+          <p>No Pokémon found. Please try again later!</p>
         </div>
       ) : (
         <ul className="pokedex-list">

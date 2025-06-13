@@ -19,45 +19,58 @@ const GlobalProvider = ({ children }) => {
   const [selectedTypes, setSelectedTypes] = useState([]);
 
   useEffect(() => {
-    axios
-      .get(apiUrl + "?type=" + selectedTypes)
-      .then((response) => {
-        setPokemons(response.data);
-      })
-      .catch((err) => {
-        console.error("Errore durante il recupero dei Pokémon:", err);
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
-  }, [selectedTypes]);
+  axios
+    .get(apiUrl + "?type=" + selectedTypes, {
+      headers: {
+        "PK-API_KEY": "poke"
+      }
+    })
+    .then((response) => {
+      setPokemons(response.data);
+    })
+    .catch((err) => {
+      console.error("Errore durante il recupero dei Pokémon:", err);
+    })
+    .finally(() => {
+      setIsLoading(false);
+    });
+}, [selectedTypes]);
+
 
   const fetchSinglePokemon = (slug) => {
-    setIsLoadingSinglePokemon(true);
-    axios
-      .get(`${apiUrl}/bySlug/${slug}`)
-      .then((response) => {
-        setCurrentPokemon(response.data);
-      })
-      .catch((err) => {
-        console.error("Errore durante il recupero dei Pokémon:", err);
-      })
-      .finally(() => {
-        setIsLoadingSinglePokemon(false);
-      });
-  };
+  setIsLoadingSinglePokemon(true);
+  axios
+    .get(`${apiUrl}/bySlug/${slug}`, {
+      headers: {
+        "PK-API_KEY": "poke"
+      }
+    })
+    .then((response) => {
+      setCurrentPokemon(response.data);
+    })
+    .catch((err) => {
+      console.error("Errore durante il recupero dei Pokémon:", err);
+    })
+    .finally(() => {
+      setIsLoadingSinglePokemon(false);
+    });
+};
 
-  useEffect(() => {
-    axios
-      .get(`http://localhost:8080/api/types`)
-      .then((response) => {
-        setTypes(response.data);
-      })
-      .catch((error) => {
-        console.error("Errore durante il recupero dei tipi:", error);
-        setTypes([]);
-      });
-  }, []);
+ useEffect(() => {
+  axios
+    .get("http://localhost:8080/api/types", {
+      headers: {
+        "PK-API_KEY": "poke" 
+      }
+    })
+    .then((response) => {
+      setTypes(response.data);
+    })
+    .catch((error) => {
+      console.error("Errore durante il recupero dei tipi:", error);
+      setTypes([]);
+    });
+}, []);
 
   //todo trovo l'indice del pokemon
   //! lo porto in single page per capire a che indice mi trovo
