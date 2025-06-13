@@ -76,7 +76,7 @@ const GlobalProvider = ({ children }) => {
   //! lo porto in single page per capire a che indice mi trovo
   const getCurrentPokemonIndex = () => {
     if (!currentPokemon || pokemons.length === 0) return -1;
-    return pokemons.findIndex((p) => p.slug === currentPokemon.slug);
+    return pokemons.findIndex((pokemon) => pokemon.slug === currentPokemon.slug);
   };
 
   //todo uso l'indice del pokemon per trovare lo slug ed avanzare di uno
