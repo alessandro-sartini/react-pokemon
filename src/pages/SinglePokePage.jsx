@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link,useParams } from "react-router-dom";
 import { useGlobalContext } from "../context/GlobalContext";
 import "../cssComponents/SinglePokePage.css";
 import TypeList from "../components/signleProduct/TypeList";
